@@ -1,0 +1,170 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "_mixins/_mixins"
+
+//Global styles****************************************************************
+
+// ::placeholder
+// 	color: #666
+
+// ::selection
+// 	background-color: $accent
+// 	color: #fff
+
+*
+	//@include border	
+
+body
+	padding: 0
+	margin: 0
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	text-transform: uppercase
+	line-height: 25px
+	font-family: $default-font
+	overflow-x: hidden
+
+.visually-hidden:not(:focus):not(:active) 
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
+	border: 0
+	padding: 0
+	white-space: nowrap
+	clip-path: inset(100%)
+	clip: rect(0 0 0 0)
+	overflow: hidden	
+
+.container
+	min-width: 280px
+	margin: 0 auto	
+//End Global styles ***********************************************************
+
+//Header	
+
+.page-header
+	display: flex
+	position: relative
+	flex-direction: column
+	justify-content: center
+	padding: 0
+	margin: 0
+
+.main-nav
+	display: block
+
+.site-list
+	margin: 0
+	padding: 0
+	display: flex
+	flex-direction: column
+	list-style: none
+	width: 100%
+	margin: 0 auto
+
+.site-list__item
+	display: block
+	width: 100%
+
+.site-list__link
+	display: block
+	margin: 0
+	padding: 7px 0
+	text-align: center
+	text-decoration: none
+	text-transform: uppercase
+	color: $white
+	font-size: 18px
+	line-height: 40px
+	font-weight: bold
+	background-color: $blue
+	border-top: 1px solid rgba($white, 0.2)
+	border-bottom: 1px solid rgba(#000, 0.2)
+    
+.main-nav--isClose .site-list__item--active
+	display: block	
+	text-align: center	
+
+.logo
+	order: 1
+	padding: 0
+	margin: 0
+	display: flex
+	height: 54px
+	background-color: #fff	
+	justify-content: center
+
+.logo__link
+	margin: 0 auto	
+
+.logo__image
+	z-index: 999		
+
+
+.page-header__intro
+	padding: 90px 0 80px 0
+	margin: 0
+	background-color: #e4f1f9
+	text-align: center	
+	background-image: url('../img/SVG/header-triangle.svg'), url('../img/mobile/bg-back-mobile.jpg')
+	background-repeat: no-repeat
+	background-position: center bottom
+	background-size: 200%, auto	
+
+// Advantages
+
+.advantages
+	display: flex
+	flex-direction: column
+	text-transform: uppercase
+	margin: 0
+	padding: 0
+	font-size: 14px
+	line-height: 26px
+	text-align: center
+
+.advantages__intro
+	margin: 0
+	padding: 0
+	background-color: #ffffff
+	background-image: url('../img/SVG/intro-triangle.svg')
+	background-position: 50% bottom
+	background-size: cover	
+
+.advantages__tagline
+	margin: 0
+	padding: 40px 20px 35px 20px
+	font-size: 18px
+	font-weight: bold 
+
+.advantages__call
+	margin: 0
+	padding: 0 20px 50px 20px
+	color: #333333
+
+.advantages__list
+	list-style: none
+	margin: 0
+	padding: 0
+
+.advantages__list-item--blue
+	background-color: $blue	
+	color: $white	
+
+.advantages__caption
+	margin: 0
+	padding: 40px 20px 15px 20px
+	font-size: 18px	
+  
+.advantages__list--sublist
+	background-color: #fff
+	color: #000
+
+
+
+
+
+@import "media" // Always at the end
