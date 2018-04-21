@@ -27,19 +27,19 @@ gulp.task('browser-sync', function() {
 		// open: false,
 		// tunnel: true,
 		// tunnel: "projectname", //Demonstration page: http://projectname.localtunnel.me
-	})
+	});
 });
 
 //image optimization
 
 gulp.task("images", function(){
-	return gulp.src('src/img/**/*')
+	return gulp.src('src/img/**/*.{png,jpg,svg}')
 	.pipe(imagemin([
 		imagemin.optipng({optimizationLevel: 3}),
 		imagemin.jpegtran({progressive: true}),
 		imagemin.svgo()
 		]))
-	.pipe(gulp.dest('build/img'))
+	.pipe(gulp.dest('build/img'));
 });
 
 gulp.task("webp", function() {
@@ -75,7 +75,7 @@ gulp.task('styles', function() {
 			compatibility: 'ie8'
 		})) // Opt., comment out when debugging
 	.pipe(gulp.dest('build/css'))
-	.pipe(browsersync.reload( {stream: true} ))
+	.pipe(browsersync.reload( {stream: true} ));
 });
 
 //js optimization
@@ -88,7 +88,7 @@ gulp.task('js', function() {
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Mifify js (opt.)
 	.pipe(gulp.dest('build/js'))
-	.pipe(browsersync.reload({ stream: true }))
+	.pipe(browsersync.reload({ stream: true }));
 });
 
 gulp.task('clean', function() {

@@ -22,7 +22,7 @@
 // +media-breakpoint-up(sm)
 
 // // ≤768px
-@media (max-width: $mobile)
+@media (max-width: 767px)
     .main-nav--isClose .site-list__item
 	    display: none
     
@@ -110,7 +110,8 @@
     .page-header__intro-image
         width: 280px
         height: 214px            
-
+    
+// TABLET **************************************************************************
 @media (min-width: 768px)
     .site-list
         flex-direction: row
@@ -142,20 +143,172 @@
              
 
     .page-header__intro
-        padding: 78px 0 90px 0
+        padding: 77px 0 91px 0
         margin: 0
+        max-height: 518px
         background-color: #e4f1f9
         text-align: center	
-        background-image: url('../img/SVG/triangle-tablet.svg'), url('../img/desktop/bg-back-desktop@2x.jpg')
+        background-image: url('../img/SVG/header-triangle.svg'), url('../img/bg-back-tablet@1x.jpg')
         background-repeat: no-repeat
-        background-position: center bottom
-        background-size: 160%, cover 
+        background-position: 50% bottom
+        background-size: auto, 1200px 518px;
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) 
+            background-image: url('../img/SVG/header-triangle.svg'), url('../img/bg-back-tablet@2x.jpg')
+            background-repeat: no-repeat
+            background-position: 50% bottom
+            background-size: auto, 1200px 518px;
+
+    .page-header__intro-image
+        padding: 0
+        margin: 0    
        
     .logo
         order: 0    
     
     .burger-toggler
         display: none
+
+    .advantages__intro
+        padding: 50px 80px 50px 80px
+        max-height: 206px
+
+    .advantages__tagline
+        font-size: 21px
+        padding: 0 20px 35px 20px
+
+    .advantages__list
+        width: 100%
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap  
+        align-items: stretch
+        justify-content: flex-start
+        align-content: stretch
+
+    .advantages__list-item
+        display: flex
+        flex-direction: row
+        width: 100%
+        margin: 0
+        align-items: center
+        justify-content: center
+        
+        .list-wrapper
+            margin: 0 auto
+            padding: 0 35px
+            width: 33.333%
+            display: flex
+            flex-direction: column
+            flex-grow: 1
+
+        picture
+            margin: 0
+            padding: 0
+            max-width: 66.666%
+            justify-content: flex-end
+
+    .advantages__caption
+        font-size: 21px       
+
+    .advantages__list-item--blue
+        width: 100%  
+
+    .advantages__list-item--blue:first-child
+        background-image: none  
+        padding: 0
+        flex-wrap: wrap
+
+    .advantages__list-item--blue:nth-child(2)
+        flex-direction: row-reverse    
+
+    .advantages__list--sublist
+        width: 100%
+        display: flex
+        flex-direction: row
+        margin: 0
+        padding: 0
+        box-sizing: border-box
+
+        .advantages__caption
+            padding: 30px 0 25px 0
+        
+        .advantages__description
+            padding-left: 0
+            padding-bottom: 35px
+            margin: 0 auto
+            text-align: center
+
+    .sublist-container
+        padding: 30px 45px
+        width: 33.333%
+        flex-grow: 1
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        flex-wrap: nowrap
+
+        &:nth-child(2)
+            order: 1
+
+    .sublist-wrapper
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        .advantages__icon
+            margin: 0 auto
+            margin-bottom: 25px
+
+            &:nth-child(1)
+                width: 75px
+                height: 72px   
+
+            &:nth-child(2)
+                width: 77px
+                height: 68px  
+
+            &:nth-child(3)
+                width: 64px
+                height: 75px              
+
+    .advantages__list-item--grey
+        width: 33.333%   
+        flex-grow: 1   
+        
+        .list-wrapper 
+            border: none   
+
+    .offer__container
+        max-width: 458px
+        padding: 55px 0 
+
+    .offer__caption	
+        font-size: 30px 
+
+    .offer__map
+        background-image: url('../img/bg-map-tablet@1x.jpg')
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
+            background-image: url('../img/bg-map-tablet@2x.jpg')
+
+    .page-footer
+        flex-direction: row 
+        padding: 35px 60px
+        justify-content: space-between 
+        align-items: center 
+
+    .page-footer__tag
+        padding: 0    
+
+    .page-footer__social-list            
+        margin: 0
+        padding: 0
+
+    .page-footer__copyrights
+        margin: 0
+        padding: 0 
+
 
 // // ≤992px
 @media (max-width: $tablet)
@@ -165,10 +318,63 @@
 
 // // ≤1200px
 @media (min-width: 1200px)
+    body 
+        max-width: 1200px
+        margin: 0 auto
+        box-shadow: 0 0 15px 0 rgba(#000, 0.2)
+
     .page-header__container
         width: 1200px
         margin: 0 auto
 
     .page-header__intro
-        background-size: 100%, cover 
+        background-image: url('../img/SVG/header-triangle.svg'), url('../img/bg-back-desktop@1x.jpg')
+        background-repeat: no-repeat
+        background-position: 50% bottom 
+        background-size: auto, 1200px 518px; 
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
+            background-image: url('../img/SVG/header-triangle.svg'), url('../img/bg-back-desktop@2x.jpg')
+            background-repeat: no-repeat
+            background-position: 50% bottom 
+            background-size: auto, 1200px 518px;    
+    picture
+        overflow: hidden
 
+        .advantages__photo
+            margin: -72px 0    
+
+    .list-wrapper
+        padding: 0 65px
+
+    .advantages__caption
+        padding: 40px 60px 15px 60px   
+
+    .offer__map
+        background-image: url('../img/bg-map-desktop@1x.jpg')
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
+            background-image: url('../img/bg-map-desktop@2x.jpg')    
+
+    .page-footer
+        justify-content: flex-start
+        padding: 35px 0
+
+    .page-footer__tag
+        width: 400px
+        padding: 0 
+        text-align: center   
+
+    .page-footer__social-list
+        width: 400px            
+        margin: 0
+        padding: 0
+        justify-content: center
+
+    .page-footer__copyrights
+        width: 400px
+        margin: 0
+        padding: 0  
+        justify-content: flex-end
+        padding-right: 44px  
+
+
+    
