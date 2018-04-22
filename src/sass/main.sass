@@ -29,7 +29,7 @@ body
 
 img 
 	max-width: 100%
-  	height: auto 
+	height: auto 
 
 picture
 	margin: 0
@@ -106,17 +106,20 @@ source
 	height: 54px
 	background-color: #fff	
 	justify-content: center
+	text-align: center
 
 .logo__link
-	margin: 0 auto	
+	display: inline-block
+	// margin: 0 auto	
 
 .logo__image
 	z-index: 999		
 
+
 .page-header__intro
-	padding: 90px 20px 0 20px
+	padding: 52px 20px 0 20px
 	margin: 0
-	min-height: 389px
+	min-height: 158px
 	background-color: #e4f1f9
 	text-align: center	
 	background-image: url('../img/SVG/header-triangle.svg'), url('../img/bg-back-mobile@1x.jpg')
@@ -125,11 +128,17 @@ source
 	background-size: auto, auto
 	font-size: 14px
 	line-height: 21px
+	border-bottom: 2px solid #fff
 	@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)	
 		background-image: url('../img/SVG/header-triangle.svg'), url('../img/bg-back-mobile@2x.jpg')
 		background-repeat: no-repeat
 		background-position: 50% bottom
-		background-size: auto, auto
+		background-size: auto, 768px 389px
+
+.isHome	
+	.page-header__intro
+		padding: 90px 20px 0 20px
+		min-height: 389px		
 // Advantages
 
 .advantages
@@ -163,9 +172,7 @@ source
 	list-style: none
 	margin: 0
 	padding: 0
-	// background-image: url('../img/SVG/blue_triangle.svg')
-	// background-position: 50% 0%
-	// background-size: cover
+
 .advantages__list-item
 	padding: 0
 	margin: 0
@@ -191,12 +198,13 @@ source
 		border-top: 1px solid #d6d6d6
 
 .advantages__list-item--blue:first-child
+	margin-top: -1px
 	background-color: $blue	
 	color: $white
 	background-image: url('../img/SVG/blue_triangle.svg')
 	background-repeat: no-repeat 
-	background-image-position: 50% 0%
-	background-image-size: auto
+	background-position: 50% top
+	background-size: auto
 	padding: 25px 0 0 0	
 
 .advantages__caption
@@ -218,6 +226,10 @@ source
 	margin: 0
 	padding: 0	  
 	background-color: #fff
+	width: 100%
+	height: auto
+	max-height: 260px
+	object-fit: cover
 	// display: block 
 
 .advantages__list--sublist
@@ -308,6 +320,9 @@ source
 	box-shadow: none
 	width: 100%
 	background-image: url('../img/bg-map-mobile@1x.jpg')
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
 	@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
 		background-image: url('../img/bg-map-mobile@2x.jpg')
 
@@ -388,4 +403,161 @@ source
 			& svg
 				fill: rgba(#000, 0.3)
 	
+// PHOTO page***************************************************
+.photo-and-video
+	font-size: 14px
+	line-height: 24px
+	h1 
+		font-size: 18px
+		line-height: 26px
+		text-transform: uppercase
+		font-weight: 700
+		margin: 0
+		padding: 40px 0 35px 0
+		text-align: center
+
+.photo__call, .video__call
+	text-transform: uppercase
+	margin: 0
+	padding: 0 25px 30px 25px	
+	text-align: center
+
+.photo__item
+	width: 100%
+	border-top: 1px solid rgba(#000, 0.3)
+	margin: 0
+	padding: 20px 0
+
+	picture
+		width: 100%
+		margin: 0
+		padding: 0
+
+.photo__image
+	width: 100%
+	height: auto
+	max-height: 280px
+	object-fit: cover
+
+.photo__title
+	padding: 20px 20px 10px 20px
+	margin: 0
+	font-weight: 700
+
+.photo__author
+	margin: 0
+	padding: 0 20px 10px 20px
+	text-transform: none
+
+.photo__likes
+	display: flex
+	margin: 0
+	font-weight: 700
+	padding: 0 20px
+	align-items: center
+
+.photo__likes-icon
+	fill: rgba(#000, 0.3)
+	margin-right: 15px			
+
+.video
+	width: 100%
+	border-top: 1px solid rgba(#000, 0.3)	
+
+.video__intro
+	display: block
+	font-size: 18px
+	line-height: 26px
+	text-transform: uppercase
+	font-weight: 700
+	margin: 0
+	padding: 40px 0
+	text-align: center	
+
+.video__image
+	margin: 0
+	padding: 0	
+
+.video__control-bar
+	display: flex
+	margin: -7px 20px 0 20px
+	min-height: 65px
+	position: relative
+	padding: 0
+	background-color: #f2f2f2
+	align-items: center
+	// justify-content: space-between
+
+.video__volume-slider
+	position: absolute
+	top: -45px
+	left: 0
+	background-color: #000000
+	opacity: 0.6
+	min-height: 45px
+	width: 100%
+
+	&::before
+		content: ""
+		position: absolute
+		width: 80%
+		height: 3px
+		background-color: rgba(#fff, 0.2)
+		top: 50%
+		left: 10%
+		margin-top: -1px
+
+	&::after
+		content: ""
+		position: absolute
+		width: 10px
+		height: 10px
+		background-color: $white
+		border-radius: 50%
+		top: 50%
+		left: 20%
+		margin-top: -4px
+		z-index: 3	
+		opacity: 1
+
+.video__control
+	display: inline-block
+	text-align: center
+	border: none
+	background-color: transparent
+	width: 60px
+	
+	&:hover
+		.video__control-icon
+			fill: #333
+
+	&:active
+		.video__control-icon
+			fill: rgba(#333, 0.3)		
+
+.video__control-icon
+	fill: #5c6870
+
+.video__control:nth-last-child(2)
+	margin-left: auto			
+
+.video__youtube
+	width: 100%
+	min-height: 280px
+	height: auto
+	border: 0px		
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+
 @import "media" // Always at the end

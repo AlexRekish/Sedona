@@ -108,8 +108,13 @@
             transform: rotate(-45deg)    
 
     .page-header__intro-image
-        width: 280px
-        height: 214px            
+        width: 229px
+        height: 39px
+
+    .isHome
+        .page-header__intro-image
+            width: 280px
+            height: 214px            
     
 // TABLET **************************************************************************
 @media (min-width: 768px)
@@ -127,34 +132,39 @@
         transition: 0.2s
 
         &:hover
-            color: $blue
-
-        &:focus
-            color: $browna
-
-            &:hover
-                color: $brownh
-
-            &:focus
-                color: $brownf       
+            color: $blue      
 
         &:active
             color: rgba(#000, 0.3)
-             
+
+    .active
+        color: $browna
+
+        &:hover
+            color: $brownh
+
+        &:active
+            color: $brownf    
+
+
+    .isHome
+        .page-header__intro
+            padding: 77px 0 91px 0
+            max-height: 518px
 
     .page-header__intro
-        padding: 77px 0 91px 0
+        padding: 95px 0 117px 0
         margin: 0
-        max-height: 518px
+        max-height: 290px
         background-color: #e4f1f9
         text-align: center	
-        background-image: url('../img/SVG/header-triangle.svg'), url('../img/bg-back-tablet@1x.jpg')
+        background-image: url('../img/SVG/header-triangle.svg'), url('../img/bg-back-desktop@1x.jpg')
         background-repeat: no-repeat
         background-position: 50% bottom
         background-size: auto, 1200px 518px;
 
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) 
-            background-image: url('../img/SVG/header-triangle.svg'), url('../img/bg-back-tablet@2x.jpg')
+            background-image: url('../img/SVG/header-triangle.svg'), url('../img/bg-back-desktop@2x.jpg')
             background-repeat: no-repeat
             background-position: 50% bottom
             background-size: auto, 1200px 518px;
@@ -207,6 +217,9 @@
             padding: 0
             max-width: 66.666%
             justify-content: flex-end
+
+            .advantages__photo
+                max-height: none
 
     .advantages__caption
         font-size: 21px       
@@ -309,6 +322,72 @@
         margin: 0
         padding: 0 
 
+    .photo
+        display: flex
+        flex-wrap: wrap
+        padding: 0 60px
+        justify-content: center
+
+    .photo-and-video
+        width: 100%
+        h1 
+            font-size: 30px
+            padding: 70px 0 35px 0
+            width: 100%
+
+    .photo__call, .video__call
+        padding: 0 100px 70px 100px
+        width: 100%
+
+    .photo__item
+        display: flex
+        flex-wrap: wrap
+        width: 50%
+        border: none
+        padding: 0
+        justify-content: space-between
+
+    .photo__description
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background-color: #f2f2f2
+        width: 100%
+        margin-top: -7px
+
+    .photo__item:nth-child(odd)
+        .photo__description
+            background-color: #eaeaea
+
+    .photo article:first-of-type
+        width: 100%
+
+        .photo__image
+            min-height: 400px
+
+    .photo__wrapper
+        padding: 20px 0 20px 20px
+
+    .photo__title
+        padding: 0
+        padding-bottom: 10px
+
+    .photo__author
+        padding: 0
+
+    .photo__likes
+        padding: 0
+        padding-right: 20px    
+
+    .video
+        border: none
+
+    .video__youtube
+        padding: 0 60px 
+        height: 400px                        
+        
+
+
 
 // // ≤992px
 @media (max-width: $tablet)
@@ -327,16 +406,17 @@
         width: 1200px
         margin: 0 auto
 
+
     .page-header__intro
+        padding: 100px 0 120px 0
+        min-height: 300px
         background-image: url('../img/SVG/header-triangle.svg'), url('../img/bg-back-desktop@1x.jpg')
         background-repeat: no-repeat
         background-position: 50% bottom 
         background-size: auto, 1200px 518px; 
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
             background-image: url('../img/SVG/header-triangle.svg'), url('../img/bg-back-desktop@2x.jpg')
-            background-repeat: no-repeat
-            background-position: 50% bottom 
-            background-size: auto, 1200px 518px;    
+   
     picture
         overflow: hidden
 
@@ -374,7 +454,42 @@
         margin: 0
         padding: 0  
         justify-content: flex-end
-        padding-right: 44px  
+        padding-right: 44px 
+
+    .photo
+        padding: 0
+
+    .photo-and-video
+        h1 
+            padding: 110px 0 35px 0
+
+        picture
+            margin-bottom: -7px    
+
+    .photo__call, .video__call
+        padding-bottom: 75px
+
+    .photo__item
+        width: 33.33%
+        flex-grow: 1
+        position: relative
+
+    .photo__description
+        position: absolute
+        left: 0
+        bottom: 0
+        background-color: rgba(#000, 0.3) 
+        color: #fff
+
+    .photo__item:nth-child(odd)
+        .photo__description
+            background-color: rgba(#000, 0.3)
+
+    .photo__likes-icon
+	    fill: #fff
+    .video__youtube
+        padding: 0
+
 
 
     
