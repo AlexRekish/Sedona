@@ -37,9 +37,12 @@ picture
 
 source 
 	margin: 0
-	padding: 0		  
+	padding: 0
 
-.visually-hidden:not(:focus):not(:active) 
+input
+	overflow: hidden			  
+
+.visually-hidden 
 	position: absolute
 	width: 1px
 	height: 1px
@@ -286,7 +289,7 @@ source
 	margin: 0
 	padding-bottom: 40px	
 
-.offer__hotels-link
+.offer__hotels-link, .reviews__submit
 	display: block
 	margin: 0
 	padding: 15px 47px 20px 47px
@@ -404,7 +407,7 @@ source
 				fill: rgba(#000, 0.3)
 	
 // PHOTO page***************************************************
-.photo-and-video
+main
 	font-size: 14px
 	line-height: 24px
 	h1 
@@ -416,10 +419,10 @@ source
 		padding: 40px 0 35px 0
 		text-align: center
 
-.photo__call, .video__call
+.photo__call, .video__call, .reviews__call
 	text-transform: uppercase
 	margin: 0
-	padding: 0 25px 30px 25px	
+	padding: 0 20px 30px 20px	
 	text-align: center
 
 .photo__item
@@ -545,9 +548,188 @@ source
 	width: 100%
 	min-height: 280px
 	height: auto
-	border: 0px		
+	border: 0px
+
+//FORM PAGE*********************
+.reviews
+	form
+		width: 100%
+
+	section 
+		padding: 0 20px 20px 20px
+		border-top: 1px solid rgba(#000, 0.3)	
+
+.reviews__call
+	padding: 0 20px 20px 20px
+
+.reviews__title
+	font-size: 18px
+	font-weight: 700
+	text-transform: uppercase
+	line-height: 26px
+	color: #000000
+	padding: 20px 0
+	text-align: center
+	margin: 0
+
+.reviews__wrapper
+	margin: 0
+	padding-bottom: 20px
+	display: flex
+	align-items: center
+	position: relative
+
+.reviews__contacts .reviews__wrapper
+	flex-wrap: wrap	
+
+.name label
+	padding-right: 10px 	
+
+.name__fields, .contacts__fields
+	height: 60px
+	flex-grow: 1
+	background-color: #f2f2f2
+	border: none
+	padding: 20px 0 20px 20px
+
+.contacts__fields
+	width: 100%
+	padding-right: 60px
+	position: relative
+
+.reviews__wrapper--tel
+	&::after
+		content: ""
+		position: absolute
+		width: 60px
+		height: 60px
+		bottom: 20px
+		right: 0
+		background-color: #e6e6e6
+		background-image: url('../img/SVG/icon-phone.svg')
+		background-repeat: no-repeat
+		background-position: center
+		background-size: 18px 18px
+
+.reviews__wrapper--email
+	&::after
+		content: ""
+		position: absolute
+		width: 60px
+		height: 60px
+		bottom: 20px
+		right: 0
+		background-color: #e6e6e6
+		background-image: url('../img/SVG/icon-email.svg')
+		background-repeat: no-repeat
+		background-position: center
+		background-size: 16px 12px					
+
+// .name__fields[placeholder], .contacts__fields[placeholder]
+// 	font-size: 18px
+// 	line-height: 26px
+// 	color: #000000
+// 	font-weight: 700
+// 	text-overflow: ellipsis	
+
+.name__fields::placeholder, .contacts__fields::placeholder
+	font-size: 18px
+	line-height: 18px
+	color: #000000
+	font-weight: 700
+	text-overflow: ellipsis		
+
+.contacts label
+	padding: 10px 20px 10px 20px
+
+.choice__label
+	position: relative
+	display: flex
+	align-items: center
+	font-size: 18px
+	line-height: 26px
+	font-weight: 700
+	color: #000
+	padding-left: 76px
+	text-transform: none
+	cursor: pointer
+	height: 56px
+	
+	
+	
+// .reviews__radio, .reviews__checkbox
+// 	// position: relative
+// 	// width: 56px
+// 	// height: 56px
+
+// .radio-indicator
+			
+
+.choice__label input[type="radio"] + .radio-indicator,
+.choice__label input[type="checkbox"] + .checkbox-indicator
+	position: absolute
+	top: 0
+	left: 0
+	width: 56px
+	height: 56px
+	background-color: #f2f2f2
+	border-radius: 50%		
+
+.choice__label input[type="checkbox"] + .checkbox-indicator
+	border-radius: 5px	
+
+.choice__label input[type="radio"]:focus + .radio-indicator,
+.choice__label input[type="checkbox"]:focus + .checkbox-indicator
+	outline: thin dotted
+	outline: 5px auto -webkit-focus-ring-color
+
+.choice__label input[type="radio"]:checked + .radio-indicator::before
+	content: ""
+	position: absolute
+	width: 22px
+	height: 22px
+	border-radius: 50%
+	background-color: #333
+	top: 17px
+	left: 17px		
 
 
+.choice__label input[type="checkbox"]:checked + .checkbox-indicator
+	background-image: url('../img/SVG/icon-tick.svg')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: 24px 16px
+
+.reviews__emotions
+	textarea
+		width: 100%
+		min-height: 160px
+		background-color: #f2f2f2
+		border: none
+		margin: 0
+		padding: 20px 20px
+		margin-bottom: 50px	
+
+	// textarea[placeholder]
+	// 	font-size: 18px
+	// 	line-height: 26px
+	// 	color: #000000
+	// 	font-weight: 700
+	// 	text-overflow: ellipsis	
+
+	textarea::placeholder
+		font-size: 18px
+		line-height: 26px
+		color: #000000
+		font-weight: 700
+		text-overflow: ellipsis
+
+.reviews__submit
+	width: 100%
+	min-height: 58px
+	border: none
+	padding: 0
+	margin: 0			
 
 
 
