@@ -384,8 +384,78 @@
 
     .video__youtube
         padding: 0 60px 
-        height: 400px                        
-        
+        min-height: 400px
+
+    .reviews
+        padding: 0 60px
+        fieldset
+            padding: 0
+            padding-bottom: 0
+            border: none
+            border-top: 1px solid rgba(#000, 0.3)
+
+        h1 
+            font-size: 30px
+            padding: 70px 100px 35px 100px 
+
+    .reviews__call
+        padding: 0 100px 60px 100px
+        border: none
+
+    .reviews__title
+        display: flex
+        padding: 30px 60px 30px 60px
+        font-size: 21px
+        line-height: 26px
+    
+    .reviews__name .reviews__title,
+    .reviews__impressions .reviews__title
+        text-align: left
+        padding: 20px 0 40px 0
+        width: 100%
+
+    .reviews__form
+        display: flex
+        flex-wrap: wrap
+
+    .reviews__impressions
+        order: -1
+        width: 50%
+
+    .reviews__name 
+        width: 50%
+
+    .reviews__contacts
+        width: 100%
+
+    .reviews__places
+        .flex-wrapper
+            width: calc(100% - 180px)
+            display: flex
+            flex-wrap: wrap
+            flex-direction: row
+            margin: 0 90px
+
+            .reviews__wrapper
+                width: 50% 
+                padding-bottom: 30px 
+
+    .reviews .reviews__emotions
+        width: 100%
+        border-top: 1px solid rgba(#000, 0.3)
+        padding-bottom: 65px
+
+    .button-wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    .reviews__submit
+        width: 50%  
+
+    .reviews__description
+        display: block                             
+
 
 
 
@@ -490,6 +560,45 @@
     .video__youtube
         padding: 0
 
+    .reviews
+        padding: 0 150px 
 
+    .contacts .flex-wrapper
+        display: flex
+        flex-wrap: wrap
 
+    .contacts .reviews__wrapper
+        width: 50%
+        flex-wrap: nowrap
+
+    .contacts label
+        white-space: nowrap
+        padding-left: 0
+
+    .contacts__fields
+        width: 315px
+        flex-grow: 0
+
+    .desktop-hidden
+        display: none
+
+    .reviews__wrapper--tel
+	    &::after
+            right: 44px
+
+    .reviews__wrapper--email
+	    &::after
+            right: 2px        
     
+    .reviews__places
+        .flex-wrapper
+            width: 900px
+            display: flex
+            flex-wrap: nowrap
+            flex-direction: row
+            justify-content: flex-start
+            margin: 0
+            
+            .reviews__wrapper
+                width: 225px 
+            
