@@ -62,7 +62,7 @@ gulp.task('sprite', function () {
 // sass to css with minification
 
 gulp.task('styles', function() {
-	return gulp.src('src/'+syntax+'/**/*.'+syntax+'')
+	return gulp.src('src/'+syntax+'/**/main.'+syntax+'')
 	.pipe(sass({ outputStyle: 'expanded' }).on('error', notify.onError()))
 	.pipe(autoprefixer( {
 			browsers: ['last 15 versions'],

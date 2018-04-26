@@ -1,0 +1,63 @@
+@import "../_vars"
+.choice__label
+	position: relative
+	display: flex
+	align-items: center
+	font-size: 18px
+	line-height: 26px
+	font-weight: 700
+	color: #000
+	padding-left: 76px
+	text-transform: none
+	cursor: pointer
+	height: 58px
+
+.choice__label input[type="radio"] + .radio-indicator,
+.choice__label input[type="checkbox"] + .checkbox-indicator
+	position: absolute
+	top: 0
+	left: 0
+	width: 58px
+	height: 58px
+	background-color: #f2f2f2
+	border-radius: 50%		
+
+.choice__label input[type="checkbox"] + .checkbox-indicator
+	border-radius: 5px	
+
+.choice__label input[type="radio"]:focus + .radio-indicator,
+.choice__label input[type="checkbox"]:focus + .checkbox-indicator
+	outline: thin dotted
+	outline: 5px auto -webkit-focus-ring-color
+
+.choice__label input[type="radio"]:hover + .radio-indicator,
+.choice__label input[type="checkbox"]:hover + .checkbox-indicator
+	background-color: #e5e5e5
+
+.choice__label input[type="radio"]:active + .radio-indicator,
+.choice__label input[type="checkbox"]:active + .checkbox-indicator
+	background-color: #d5d5d5		
+
+.choice__label input[type="radio"]:checked + .radio-indicator::before
+	content: ""
+	position: absolute
+	width: 22px
+	height: 22px
+	border-radius: 50%
+	background-color: #333
+	top: 18px
+	left: 18px
+
+.choice__label input[type="radio"]:checked:active + .radio-indicator::before			
+	opacity: 0.3
+	background-color: #d5d5d5
+
+.choice__label input[type="checkbox"]:checked + .checkbox-indicator
+	background-image: url('../img/SVG/icon-tick.svg')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: 24px 16px
+
+.choice__label input[type="checkbox"]:checked:active + .checkbox-indicator
+	opacity: 0.3
+	background-color: #666    

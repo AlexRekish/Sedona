@@ -1,0 +1,118 @@
+@import "../_vars"
+.photo__item
+	width: 100%
+	border-top: 1px solid rgba(#000, 0.3)
+	margin: 0
+	padding: 20px 0
+
+	picture
+        width: 100%
+        margin: 0
+        padding: 0
+        border: none
+        outline: none
+
+
+.photo__image
+	width: 100%
+	height: auto
+	max-height: 280px
+	object-fit: cover
+
+.photo__title
+	padding: 20px 20px 10px 20px
+	margin: 0
+	font-weight: 700
+
+.photo__author
+	margin: 0
+	padding: 0 20px 10px 20px
+	text-transform: none
+    text-overflow: ellipsis
+
+.photo__likes
+	display: flex
+	margin: 0
+	font-weight: 700
+	padding: 0 20px
+	align-items: center
+
+.photo__likes-icon
+	fill: rgba(#000, 0.3)
+	margin-right: 15px		
+
+@media (min-width: 768px) 
+    .photo
+        display: flex
+        flex-wrap: wrap
+        padding: 0 60px
+        justify-content: center
+
+    .photo__item
+        display: flex
+        flex-wrap: wrap
+        width: 50%
+        border: none
+        padding: 0
+        justify-content: space-between
+        
+    .photo__description
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background-color: #f2f2f2
+        width: 100%
+        margin-top: -7px
+
+    .photo__item:nth-child(odd)
+        .photo__description
+            background-color: #eaeaea
+
+    .photo article:first-of-type
+        width: 100%
+
+        .photo__image
+            min-height: 400px
+
+    .photo__wrapper
+        padding: 20px 0 20px 20px
+
+    .photo__title
+        padding: 0
+        padding-bottom: 10px
+
+    .photo__author
+        padding: 0
+
+    .photo__likes
+        padding: 0
+        padding-right: 20px    
+
+@media (min-width: 1200px)
+    .photo
+        padding: 0
+
+    .photo__item
+        width: 33.33%
+        flex-grow: 1
+        position: relative
+
+    .photo__image
+        margin-bottom: -7px        
+
+    .photo__description
+        position: absolute
+        left: 0
+        bottom: 0
+        background-color: rgba(#000, 0.3) 
+        color: #fff
+        max-height: 100px
+
+    .photo__item:nth-child(odd)
+        .photo__description
+            background-color: rgba(#000, 0.3)
+
+    .photo__likes-icon
+	    fill: #fff
+      	
+    
