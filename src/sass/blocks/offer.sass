@@ -39,6 +39,12 @@
 	@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
 		background-image: url('../img/bg-map-mobile@2x.jpg')    	
 
+@media (min-width: 399px)
+	.offer__map
+        background-image: url('../img/bg-map-tablet@1x.jpg')
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
+            background-image: url('../img/bg-map-tablet@2x.jpg')     
+			
 @media (min-width: 768px)
     .offer__container
         max-width: 458px
@@ -46,11 +52,6 @@
 
     .offer__caption	
         font-size: 30px 
-
-    .offer__map
-        background-image: url('../img/bg-map-tablet@1x.jpg')
-        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
-            background-image: url('../img/bg-map-tablet@2x.jpg')     
 
 @media (min-width: 1200px)
 	.offer__container

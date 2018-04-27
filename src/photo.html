@@ -4,18 +4,20 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 	<title>Sedona</title>
-	<meta name="description" content="">
+	<meta name="author" content="Алексей Рекиш">
+	<meta name="description" content="Седона - небольшой городок в Аризоне, заслуживающий большего!">
+	<meta name="keywords" content="Sedona, Седона, Мост дьявола, HTML Academy, Sedona AZ, Аризона">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 	
 	<!-- Template Basic Images Start -->
-	<meta property="og:image" content="path/to/image.jpg">
+	<meta property="og:image" content="img/bg-back-desktop@1x.jpg">
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 	<!-- Template Basic Images End -->
 
 	<!-- Custom Browsers Color Start -->
-	<meta name="theme-color" content="#000">
+	<meta name="theme-color" content="#fff">
 	<!-- Custom Browsers Color End -->
 
 	<!-- Preloads -->
@@ -40,18 +42,22 @@
 						<a href="#page-header" class="site-list__link active">Фото и видео</a>
 					</li>
 					<li class="site-list__item site-list__item--active logo">
-							<a href="#" class="logo__link">
-								<picture>
-									<source media="(min-width: 1200px)" srcset="img/SVG/desktop-logo.svg">
-									<source media="(min-width: 768px)" srcset="img/SVG/logo-sedona-tablet.svg">
-									<img src="img/SVG/logo.svg" alt="Седона" width="188" height="96" class="logo__image">	
-								</picture>
-							</a>
-							<button type="button" class="burger-toggler">
-								<span class="burger-toggler__sprite"></span>
-								<span class="visually-hidden">Меню</span>
-							</button>
-						</li>
+						<a href="#" class="logo__link">
+							<picture>
+								<source media="(min-width: 1200px)" srcset="img/SVG/desktop-logo.svg">
+								<source media="(min-width: 768px)" srcset="img/SVG/logo-sedona-tablet.svg">
+								<img src="img/SVG/logo.svg" 
+									 alt="Седона" 
+									 width="188" 
+									 height="96" 
+									 class="logo__image">	
+							</picture>
+						</a>
+						<button type="button" class="burger-toggler">
+							<span class="burger-toggler__sprite"></span>
+							<span class="visually-hidden">Меню</span>
+						</button>
+					</li>
 					<li class="site-list__item">
 						<a href="review.html" class="site-list__link">Форма отзыва</a>
 					</li>
@@ -77,11 +83,17 @@
             <p class="photo__call">Не можете решиться на путешествие из-за курса?<br> Фотографии помогут вам забыть о политике и экономике.</p>
             <article class="photo__item">
                 <picture>
-                    <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg">
-                    <source media="(min-width: 400px)" srcset="img/photo-sunset-tablet@1x.jpg">
-                    <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@2x.jpg 2x">		
-                    <source media="(min-width: 400px)" srcset="img/photo-sunset-desktop@2x.jpg 2x" >
-                    <source media="(max-width: 399px)" srcset="img/photo-sunset-mobile@2x.jpg 2x">
+					<source media="(min-width: 900px)" srcset="img/photo-sunset-desktop@1x.webp" type="image/webp">	
+					<source media="(min-width: 900px)" srcset="img/photo-sunset-desktop@1x.jpg" type="image/jpeg">
+					<source media="(min-width: 400px)" srcset="img/photo-sunset-tablet@1x.webp" type="image/webp">	
+					<source media="(min-width: 400px)" srcset="img/photo-sunset-tablet@1x.jpg" type="image/jpeg">
+					<source media="(min-width: 900px)" srcset="img/photo-sunset-desktop@2x.webp 2x" type="image/webp">	
+					<source media="(min-width: 900px)" srcset="img/photo-sunset-desktop@2x.jpg 2x" type="image/jpeg">
+					<source media="(min-width: 400px)" srcset="img/photo-sunset-desktop@2x.webp 2x" type="image/webp">			
+					<source media="(min-width: 400px)" srcset="img/photo-sunset-desktop@2x.jpg 2x" type="image/jpeg">
+					<source media="(max-width: 399px)" srcset="img/photo-sunset-mobile@2x.webp 2x" type="image/webp">	
+					<source media="(max-width: 399px)" srcset="img/photo-sunset-mobile@2x.jpg 2x" type="image/jpeg">
+					<source media="(max-width: 399px)" srcset="img/photo-sunset-mobile@1x.webp" type="image/webp">	
                     <img src="img/photo-sunset-mobile@1x.jpg" alt="" class="photo__image">
 				</picture>
 				<div class="photo__description">
@@ -99,11 +111,17 @@
             </article>
             <article class="photo__item">
                 <picture>
-                    <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg">
-                    <source media="(min-width: 400px)" srcset="img/photo-cactus-tablet@1x.jpg">
-                    <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@2x.jpg 2x">		
-                    <source media="(min-width: 400px)" srcset="img/photo-cactus-desktop@2x.jpg 2x" >
-                    <source media="(max-width: 399px)" srcset="img/photo-cactus-mobile@2x.jpg 2x">
+					<source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.webp" type="image/webp">
+					<source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg" type="image/jpeg">
+					<source media="(min-width: 400px)" srcset="img/photo-cactus-tablet@1x.webp" type="image/webp">	
+					<source media="(min-width: 400px)" srcset="img/photo-cactus-tablet@1x.jpg" type="image/jpeg">
+					<source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@2x.webp 2x" type="image/webp">	
+					<source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@2x.jpg 2x" type="image/jpeg">
+					<source media="(min-width: 400px)" srcset="img/photo-cactus-desktop@2x.webp 2x" type="image/webp">			
+					<source media="(min-width: 400px)" srcset="img/photo-cactus-desktop@2x.jpg 2x" type="image/jpeg">
+					<source media="(max-width: 399px)" srcset="img/photo-cactus-mobile@2x.webp 2x" type="image/webp">		
+					<source media="(max-width: 399px)" srcset="img/photo-cactus-mobile@2x.jpg 2x" type="image/jpeg">
+					<source media="(max-width: 399px)" srcset="img/photo-cactus-mobile@1x.webp" type="image/webp">	
                     <img src="img/photo-cactus-mobile@1x.jpg" alt="" class="photo__image">
 				</picture>
 				<div class="photo__description">
@@ -121,11 +139,18 @@
             </article>
             <article class="photo__item">
                 <picture>
-                    <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg">
-                    <source media="(min-width: 400px)" srcset="img/photo-roads-tablet@1x.jpg">
-                    <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@2x.jpg 2x">		
-                    <source media="(min-width: 400px)" srcset="img/photo-roads-desktop@2x.jpg 2x" >
-                    <source media="(max-width: 399px)" srcset="img/photo-roads-mobile@2x.jpg 2x">
+					<source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.webp" type="image/webp">
+                    <source media="(min-width: 400px)" srcset="img/photo-roads-tablet@1x.webp" type="image/webp">
+                    <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@2x.webp 2x" type="image/webp">		
+                    <source media="(min-width: 400px)" srcset="img/photo-roads-desktop@2x.webp 2x" type="image/webp">
+					<source media="(max-width: 399px)" srcset="img/photo-roads-mobile@2x.webp 2x" type="image/webp">
+					<source media="(max-width: 399px)" srcset="img/photo-roads-mobile@1x.webp" type="image/webp">	
+
+                    <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg" type="image/jpeg">
+                    <source media="(min-width: 400px)" srcset="img/photo-roads-tablet@1x.jpg" type="image/jpeg">
+                    <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@2x.jpg 2x" type="image/jpeg">		
+                    <source media="(min-width: 400px)" srcset="img/photo-roads-desktop@2x.jpg 2x" type="image/jpeg">
+                    <source media="(max-width: 399px)" srcset="img/photo-roads-mobile@2x.jpg 2x" type="image/jpeg">
                     <img src="img/photo-roads-mobile@1x.jpg" alt="" class="photo__image">
 				</picture>
 				<div class="photo__description">
@@ -143,11 +168,18 @@
             </article>
             <article class="photo__item">
                 <picture>
-                    <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg">
-                    <source media="(min-width: 400px)" srcset="img/photo-bridge-tablet@1x.jpg">
-                    <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@2x.jpg 2x">		
-                    <source media="(min-width: 400px)" srcset="img/photo-bridge-tablet@2x.jpg 2x" >
-                    <source media="(max-width: 399px)" srcset="img/photo-bridge-mobile@2x.jpg 2x">
+					<source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp" type="image/webp">
+                    <source media="(min-width: 400px)" srcset="img/photo-bridge-tablet@1x.webp" type="image/webp">
+                    <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@2x.webp 2x" type="image/webp">		
+                    <source media="(min-width: 400px)" srcset="img/photo-bridge-tablet@2x.webp 2x" type="image/webp">
+					<source media="(max-width: 399px)" srcset="img/photo-bridge-mobile@2x.webp 2x" type="image/webp">
+					<source media="(max-width: 399px)" srcset="img/photo-bridge-mobile@1x.webp" type="image/webp">	
+						
+                    <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg" type="image/jpeg">
+                    <source media="(min-width: 400px)" srcset="img/photo-bridge-tablet@1x.jpg" type="image/jpeg">
+                    <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@2x.jpg 2x" type="image/jpeg">		
+                    <source media="(min-width: 400px)" srcset="img/photo-bridge-tablet@2x.jpg 2x" type="image/jpeg">
+                    <source media="(max-width: 399px)" srcset="img/photo-bridge-mobile@2x.jpg 2x" type="image/jpeg">
                     <img src="img/photo-bridge-mobile@1x.jpg" alt="" class="photo__image">
 				</picture>
 				<div class="photo__description">
@@ -198,7 +230,12 @@
                     </svg>
 				</button>        
 			</div> -->
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/sP_kQkDOT1A" allowfullscreen class="video__youtube"></iframe>
+			<iframe width="560" 
+					height="315" 
+					src="https://www.youtube.com/embed/sP_kQkDOT1A" 
+					allowfullscreen class="video__youtube" 
+					aria-label="Видео-презентация достопримечательностей и красот Седоны">
+			</iframe>
         </section>
         </main>
 	<footer class="page-footer">

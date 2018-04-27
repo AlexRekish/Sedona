@@ -22,18 +22,13 @@
 
 	.reviews__call
 		padding: 0 50px 25px 50px
-		border: none
-.isWarning
-	display: block
-
-.isGood
-	display: block			
+		border: none		
 
 .modal__button
 	width: calc(100% - 140px)
 	margin: 0 auto 35px 
 
-.modal__overlay
+.overlay
 	top: 0
 	left: 0
 	position: fixed
@@ -42,6 +37,12 @@
 	z-index: 1
 	background-color: rgba(0,0,0, 0.5)	
 	display: none
+
+.isWarning
+	display: block
+
+.isGood
+	display: block		
 
 @media (min-width: 768px)
 	.modal--warning,

@@ -59,6 +59,7 @@
 	font-size: 18px
 	line-height: 18px
 	height: 58px
+	outline: none
 
 .reviews__contacts-fields
 	width: 100%
@@ -122,7 +123,8 @@
 	border: none
 	margin: 0
 	padding: 20px 20px
-	margin-bottom: 50px	
+	margin-bottom: 50px
+	outline: none	
 
 .reviews__emotions-fields[placeholder]
 	font-size: 18px
@@ -218,7 +220,13 @@
 			.reviews__wrapper
 				width: 50%
 				padding-bottom: 30px 
-	
+
+			.reviews__wrapper:nth-child(odd)
+				order: 0
+
+			.reviews__wrapper:nth-child(even)
+				order: 1	
+
 	.reviews .reviews__emotions
         width: 100%
         border-top: 1px solid rgba(#000, 0.3)
@@ -270,7 +278,6 @@
         .flex-wrapper
             width: 900px
             display: flex
-            flex-wrap: nowrap
             flex-direction: row
             justify-content: flex-start
             margin: 0
