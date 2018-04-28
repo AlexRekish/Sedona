@@ -1,6 +1,7 @@
 var burger = document.querySelector('.burger-toggler');
 var menu = document.querySelector('.main-nav');
 var burgerLine = document.querySelector('.burger-toggler__sprite');
+
 burger.addEventListener('click', function(evt) {
 	evt.preventDefault();
 	burgerLine.classList.toggle('burger-toggler__sprite--isOpen');
@@ -9,10 +10,10 @@ burger.addEventListener('click', function(evt) {
 
 var formSubmit = document.querySelector('.reviews__form');
 var modalOk = document.querySelector('.modal--ok');
-// var modalWarning = document.querySelector('.modal--warning');
 var requiredFields = document.querySelectorAll('input[required]');
 var overlay = document.querySelector('.overlay');
 var modalCloseOk = document.querySelector('.modal__button--Ok');
+// var modalWarning = document.querySelector('.modal--warning');
 // var modalCloseWarning = document.querySelector('.modal__button--warning');
 
 formSubmit.addEventListener('submit', function(evt) {
