@@ -36,28 +36,23 @@ bodySubmit.addEventListener('submit', function(evt) {
 		modalOk.classList.add('isGood');
 });
 
+if (overlay) {
+	overlay.addEventListener('click', function (evt) {
+		evt.preventDefault();
+		modalOk.classList.remove('isGood');
+		overlay.classList.remove('isGood');
+		modalWarning.classList.remove('isWarning');
+		overlay.classList.remove('isGood');
+	});
+}
 
-overlay.addEventListener('click', function(evt) {
-	evt.preventDefault();
-	modalOk.classList.remove('isGood');
-	overlay.classList.remove('isGood');
-	modalWarning.classList.remove('isWarning');
-	overlay.classList.remove('isGood');
-});
-
-closeModalOk.addEventListener('click', function (evt) {
-	evt.preventDefault();
-	modalOk.classList.remove('isGood');
-	overlay.classList.remove('isGood');
-});
-
-// modalCloseWarning.addEventListener('click', function(evt) {
-// 	evt.preventDefault();
-// 	modalWarning.classList.remove('isWarning');
-// 	overlay.classList.remove('isGood');
-// });
-
-
+if (closeModalOk) {
+	closeModalOk.addEventListener('click', function (evt) {
+		evt.preventDefault();
+		modalOk.classList.remove('isGood');
+		overlay.classList.remove('isGood');
+	});
+}
 
 //svgxuse polyfill
 (function(){if("undefined"!==typeof window&&window.addEventListener){var e=Object.create(null),l,d=function(){clearTimeout(l);l=setTimeout(n,100)},m=function(){},t=function(){window.addEventListener("resize",d,!1);window.addEventListener("orientationchange",d,!1);if(window.MutationObserver){var k=new MutationObserver(d);k.observe(document.documentElement,{childList:!0,subtree:!0,attributes:!0});m=function(){try{k.disconnect(),window.removeEventListener("resize",d,!1),window.removeEventListener("orientationchange",
