@@ -1,6 +1,14 @@
 var burger = document.querySelector('.burger-toggler');
 var menu = document.querySelector('.main-nav');
 var burgerLine = document.querySelector('.burger-toggler__sprite');
+var reviewsForm = document.querySelector('.reviews__form');
+var modalOk = document.querySelector('.modal--ok');
+var requiredFields = document.querySelectorAll('input[required]');
+var overlay = document.querySelector('.overlay');
+var closeModalOk = document.querySelector('.modal__button--Ok');
+var bodySubmit = document.querySelector('body');
+var modalWarning = document.querySelector('.modal--warning');
+var modalCloseWarning = document.querySelector('.modal__button--warning');
 
 burger.addEventListener('click', function(evt) {
 	evt.preventDefault();
@@ -8,34 +16,26 @@ burger.addEventListener('click', function(evt) {
 	menu.classList.toggle('main-nav--isClose');
 });
 
-var formSubmit = document.querySelector('.reviews__form');
-var modalOk = document.querySelector('.modal--ok');
-var requiredFields = document.querySelectorAll('input[required]');
-var overlay = document.querySelector('.overlay');
-var modalCloseOk = document.querySelector('.modal__button--Ok');
-// var modalWarning = document.querySelector('.modal--warning');
-// var modalCloseWarning = document.querySelector('.modal__button--warning');
+if (reviewsForm) {
+	reviewsForm.addEventListener('invalid', function (evt) {
+		for (var i = 0; i < requiredFields.length; i++) {
+			if (!requiredFields[i].validity.valid) {
+				requiredFields[i].validity.setCustomValidity('Обязательное поле');
+				overlay.classList.add('isWarning');
+				modalWarning.classList.add('isWarning');
+			}
+		}
+	})
+}
 
-formSubmit.addEventListener('submit', function(evt) {
-	var requiredEmpty = false;
-	for (var i = 0; i < requiredFields.length; i++) {
-		if (!requiredFields[i].checkValidity()) {
-			requiredEmpty = true;
-			break;
-		} 
-	}
 
-	if (requiredEmpty) {
-		evt.preventDefault();
-		overlay.classList.add('isWarning');
-		modalWarning.classList.add('isWarning');
-	} else {
+
+bodySubmit.addEventListener('submit', function(evt) {
 		evt.preventDefault();
 		overlay.classList.add('isGood');
 		modalOk.classList.add('isGood');
-	}
-	
 });
+
 
 overlay.addEventListener('click', function(evt) {
 	evt.preventDefault();
@@ -45,7 +45,7 @@ overlay.addEventListener('click', function(evt) {
 	overlay.classList.remove('isGood');
 });
 
-modalCloseOk.addEventListener('click', function(evt) {
+closeModalOk.addEventListener('click', function (evt) {
 	evt.preventDefault();
 	modalOk.classList.remove('isGood');
 	overlay.classList.remove('isGood');
